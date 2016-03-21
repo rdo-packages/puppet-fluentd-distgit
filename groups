@@ -1,3 +1,5 @@
-# UUID                                  	Group Name
-#
-8539d57a574f4cd81213cdd12f2b176146871010	puppet-fluentd-distgit-ptl
+# UUID          Group Name
+6ddfecad023c6f4fa3ac8c4d2583c502ea675a73 	Non-Interactive Users
+cee97fc44b508fd92be257f11ddfbdc951ddb88c       	puppet-fluentd-distgit-core
+8539d57a574f4cd81213cdd12f2b176146871010        	puppet-fluentd-distgit-ptl
+global:Registered-Users		Registered Users
