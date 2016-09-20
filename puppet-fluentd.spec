@@ -1,4 +1,10 @@
+%{!?upstream_version: %global upstream_version %{commit}}
 %define upstream_name konstantin-fluentd
+%global commit 0400aafa8f23971485b838750d41928585cf3547
+%global shortcommit %(c=%{commit}; echo ${c:0:7})
+# DO NOT REMOVE ALPHATAG
+%global alphatag .%{shortcommit}git
+
 
 Name:           puppet-fluentd
 Version:        XXX
@@ -8,7 +14,7 @@ License:        Apache-2.0
 
 URL:            https://github.com/soylent/konstantin-fluentd
 
-Source0:        https://github.com/soylent/konstantin-fluentd/archive/%{version}.tar.gz
+Source0:        https://github.com/soylent/%{upstream_name}/archive/%{commit}.tar.gz#/%{upstream_name}-%{shortcommit}.tar.gz
 
 BuildArch:      noarch
 
@@ -19,7 +25,7 @@ Requires:       puppet >= 2.7.0
 Installs, configures, and manages Fluentd data collector
 
 %prep
-%setup -q -n %{upstream_name}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 find . -type f -name ".*" -exec rm {} +
 find . -size 0 -exec rm {} +
