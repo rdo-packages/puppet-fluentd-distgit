@@ -7,8 +7,8 @@
 
 
 Name:           puppet-fluentd
-Version:        XXX
-Release:        XXX
+Version:        0.6.1
+Release:        1%{?alphatag}%{?dist}
 Summary:        Installs, configures, and manages Fluentd data collector
 License:        Apache-2.0
 
@@ -49,4 +49,7 @@ cp -rp * %{buildroot}/%{_datadir}/openstack-puppet/modules/fluentd/
 
 
 %changelog
+* Tue Sep 20 2016 Haikel Guemar <hguemar@fedoraproject.org> - 0.6.1-1.0400aaf.git
+- Newton update 0.6.1 (0400aafa8f23971485b838750d41928585cf3547)
+
 
