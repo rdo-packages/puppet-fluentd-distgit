@@ -1,20 +1,18 @@
-%{!?upstream_version: %global upstream_version %{commit}}
 %define upstream_name konstantin-fluentd
-%global commit 0400aafa8f23971485b838750d41928585cf3547
-%global shortcommit %(c=%{commit}; echo ${c:0:7})
-# DO NOT REMOVE ALPHATAG
-%global alphatag .%{shortcommit}git
-
 
 Name:           puppet-fluentd
-Version:        0.6.1
-Release:        1%{?alphatag}%{?dist}
+Version:        0.8.0
+Release:        1%{?dist}
 Summary:        Installs, configures, and manages Fluentd data collector
 License:        Apache-2.0
 
 URL:            https://github.com/soylent/konstantin-fluentd
 
-Source0:        https://github.com/soylent/%{upstream_name}/archive/%{commit}.tar.gz#/%{upstream_name}-%{shortcommit}.tar.gz
+Source0:        https://github.com/soylent/konstantin-fluentd/archive/v%{version}.tar.gz
+
+#
+# patches_base=v0.8.0
+#
 
 BuildArch:      noarch
 
@@ -49,6 +47,9 @@ cp -rp * %{buildroot}/%{_datadir}/openstack-puppet/modules/fluentd/
 
 
 %changelog
+* Tue Nov 08 2016 Alfredo Moralejo <amoralej@redhat.com> 0.8.0-1
+- Update to 0.8.0
+
 * Tue Sep 20 2016 Haikel Guemar <hguemar@fedoraproject.org> - 0.6.1-1.0400aaf.git
 - Newton update 0.6.1 (0400aafa8f23971485b838750d41928585cf3547)
 
