@@ -1,14 +1,14 @@
 %{!?upstream_version: %global upstream_version %{commit}}
 %define upstream_name konstantin-fluentd
-%global commit 0400aafa8f23971485b838750d41928585cf3547
+%global commit 4dfc15a70970fc9e182c876d6dc74b3764fbea4b
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
 # DO NOT REMOVE ALPHATAG
 %global alphatag .%{shortcommit}git
 
 
 Name:           puppet-fluentd
-Version:        XXX
-Release:        XXX
+Version:        0.10.0
+Release:        2%{?alphatag}%{?dist}
 Summary:        Installs, configures, and manages Fluentd data collector
 License:        ASL 2.0
 
@@ -49,5 +49,8 @@ cp -rp * %{buildroot}/%{_datadir}/openstack-puppet/modules/fluentd/
 
 
 %changelog
+* Thu Feb 15 2018 RDO <dev@lists.rdoproject.org> 0.10.0-2.4dfc15agit
+- Update to post 0.10.0 (4dfc15a70970fc9e182c876d6dc74b3764fbea4b)
+
 
 
